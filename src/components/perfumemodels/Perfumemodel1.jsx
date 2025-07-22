@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF, Environment } from '@react-three/drei';
 
@@ -7,13 +7,26 @@ function PerfumeModel() {
   return (
     <primitive
       object={scene}
-      scale={[0.5, 0.5, 0.5]}      // proper scaling
-      position={[0, -1.2, 0]}      // thoda niche shift
+      scale={[0.5, 0.5, 0.5]}
+      position={[0, -1.2, 0]}
     />
   );
 }
 
- function PerfumeCanvas() {
+function PerfumeCanvas() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // mobile width
+    };
+
+    handleResize(); // initial check
+    window.addEventListener('resize', handleResize); // listen for changes
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="w-full h-[300px] md:h-[570px]">
       <Canvas camera={{ position: [0, 1, 12], fov: 30 }}>
@@ -22,11 +35,16 @@ function PerfumeModel() {
         <Suspense fallback={null}>
           <PerfumeModel />
           <Environment preset="city" />
-          <OrbitControls enableZoom={false} autoRotate  enablePan={false}   />
+          <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            enableRotate={!isMobile} // ✅ Disable rotate on mobile
+            autoRotate={!isMobile ? true : false} // ✅ Only autoRotate on desktop
+          />
         </Suspense>
       </Canvas>
     </div>
   );
 }
 
-export default PerfumeCanvas
+export default PerfumeCanvas;
