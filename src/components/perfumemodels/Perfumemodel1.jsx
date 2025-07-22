@@ -18,17 +18,17 @@ function PerfumeCanvas() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // mobile width
+      setIsMobile(window.innerWidth <= 768);
     };
 
     handleResize(); // initial check
-    window.addEventListener('resize', handleResize); // listen for changes
+    window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <div className="w-full h-[300px] md:h-[570px]">
+    <div className="w-full max-w-[180px] md:max-w-[330px] mx-auto h-[300px] md:h-[500px]">
       <Canvas camera={{ position: [0, 1, 12], fov: 30 }}>
         <ambientLight intensity={1.2} />
         <directionalLight position={[2, 5, 2]} intensity={1} />
@@ -38,8 +38,8 @@ function PerfumeCanvas() {
           <OrbitControls
             enableZoom={false}
             enablePan={false}
-            enableRotate={!isMobile} // ✅ Disable rotate on mobile
-            autoRotate={!isMobile ? true : false} // ✅ Only autoRotate on desktop
+            enableRotate={!isMobile ? true : false} // ❌ User drag disabled on mobile
+            autoRotate={true}                       // ✅ Always rotate automatically
           />
         </Suspense>
       </Canvas>

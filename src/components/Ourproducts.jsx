@@ -62,7 +62,7 @@
                 <TextGenerateEffect words="Manage your orders effortlessly with a sleek, intuitive dashboard for seamless tracking." />
               </div>
             </div>
-            <div className="w-full md:w-[40%] h-[20rem] md:h-[30rem]">
+            <div className="w-full md:w-[40%]  h-[17rem] md:h-[30rem]">
               <PerfumeCanvas2 />
               
             </div>
@@ -71,7 +71,7 @@
 
         <Suspense fallback={<SectionLoader />}>
           <div className="p-4 flex flex-col md:flex-row justify-between items-center gap-8 my-10">
-            <div className="w-full md:w-[40%] h-[20rem] md:h-[30rem]">
+            <div className="w-full md:w-[40%] h-[16rem] md:h-[30rem]">
               <PerfumeCanvas />
             </div>
             <div className="w-full md:w-[60%] text-center md:text-right">
