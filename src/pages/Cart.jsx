@@ -17,7 +17,7 @@ const Cart = () => {
   );
 
   return (
-    <div className="min-h-screen sm:pt-40 bg-[#E8F4E6] px-4 py-16 md:px-16 text-black font-[roboto]">
+    <div className="min-h-screen sm:pt-40 pt-24 bg-[#E8F4E6] px-4 py-16 md:px-16 text-black font-[roboto]">
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}

@@ -21,7 +21,7 @@ const Navbar = () => {
   const isAuthPage = pathname === "/login" || pathname === "/signup";
   const links = isAuthPage
     ? ["Home", "About"]                        
-    : ["Home", "Products", "About", "Login"]; 
+    : ["Home", "Shop", "About", "Login"]; 
 
   return (
     <>

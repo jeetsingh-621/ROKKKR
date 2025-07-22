@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import loginbg from "../assets/videos/klvideo5.mp4"; 
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -83,9 +84,7 @@ const Login = () => {
           <br />
           <span>
             Don’t have an account?{" "}
-            <a href="/signup" className="text-green-400 hover:underline">
-              Sign Up
-            </a>
+            <Link className="text-green-400 hover:underline" to='/signup'>Sign Up</Link>         
           </span>
         </div>
       </motion.div>

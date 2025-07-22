@@ -110,7 +110,7 @@ const container = {
 const Shop = () => {
   return (
     <div>
-    <div className="w-full bg-[#E8F4E6] min-h-screen py-20 px-6 md:px-16 text-black">
+    <div className="w-full bg-[#E8F4E6] min-h-screen py-4 md:py-20 px-6 md:px-16 text-black">
       <div className="text-center mt-24">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}

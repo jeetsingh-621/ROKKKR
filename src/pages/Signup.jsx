@@ -1,7 +1,8 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import signupbg from "../assets/videos/klvideo5.mp4"; // adjust the path as needed
+import signupbg from "../assets/videos/klvideo5.mp4"; 
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -111,9 +112,8 @@ const Signup = () => {
         <div className="mt-6 text-sm text-center space-y-2">
           <span>
             Already have an account?{" "}
-            <a href="/login" className="text-green-400 hover:underline">
-              Login
-            </a>
+            <Link  className="text-green-400 hover:underline" to='/login'>Login</Link>
+            
           </span>
         </div>
       </motion.div>

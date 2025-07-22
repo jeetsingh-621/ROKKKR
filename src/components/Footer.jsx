@@ -45,8 +45,8 @@ const Footer = () => {
       {/* Sections */}
       <motion.div variants={container} className="flex flex-col md:flex-row md:justify-between gap-12 font-[roboto]">
         <motion.section variants={item} className="w-full md:w-1/3">
-          <h2 className="text-2xl font-semibold mb-5">Quick Links</h2>
-          <ul className="space-y-3 text-lg">
+          <h2 className="text-xl font-semibold mb-5">Quick Links</h2>
+          <ul className="space-y-3 text-md">
             {currentPath !== "/" && (
               <li>
                 <Link to="/" className="hover:underline hover:text-green-400 duration-200">Home</Link>
@@ -72,8 +72,8 @@ const Footer = () => {
 
         {/* Legal Info */}
         <motion.section variants={item} className="w-full md:w-1/3">
-          <h2 className="text-2xl font-semibold mb-5">Legal information</h2>
-          <ul className="space-y-3 text-lg">
+          <h2 className="text-xl font-semibold mb-5">Legal information</h2>
+          <ul className="space-y-3 text-md">
             <li className="hover:underline hover:text-green-400 duration-200">Privacy policy</li>
             <li className="hover:underline hover:text-green-400 duration-200">Cancellation policy</li>
             <li className="hover:underline hover:text-green-400 duration-200">Refund policy</li>
@@ -84,7 +84,7 @@ const Footer = () => {
 
         {/* Newsletter */}
         <motion.section variants={item} className="w-full md:w-1/3">
-          <h2 className="text-2xl font-semibold mb-5">Newsletter</h2>
+          <h2 className="text-xl font-semibold mb-5">Newsletter</h2>
           <p className="text-sm mb-4">
             Subscribe to get special offers, free giveaways, and once‑in‑a‑lifetime deals.
           </p>
@@ -94,11 +94,11 @@ const Footer = () => {
               type="email"
               required
               placeholder="Email"
-              className="flex-1 p-2 bg-transparent border-b border-white outline-none placeholder:text-gray-400"
+              className="flex-1 p-2 text-md bg-transparent border-b border-white outline-none placeholder:text-gray-400"
             />
             <button
               type="submit"
-              className="px-5 py-2 border border-white rounded-md hover:bg-white hover:text-black transition"
+              className="px-5 py-2 border text-md  border-white rounded-md hover:bg-white hover:text-black transition"
             >
               Join
             </button>

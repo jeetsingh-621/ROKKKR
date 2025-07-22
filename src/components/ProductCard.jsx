@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../context/CartContext"; // ✅ Import cart context
+import { useCart } from "../context/CartContext"; 
 
 const cardVariants = {
   hidden: { opacity: 0 },
@@ -17,12 +17,11 @@ const cardVariants = {
 
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
-  const { addToCart } = useCart(); // ✅ Get addToCart from context
+  const { addToCart } = useCart(); 
 
-  // ✅ Function to handle Add to Cart
   const handleAddToCart = () => {
-    addToCart(product);      // ✅ Actually adds the item
-    navigate("/cart");       // ✅ Then takes to Cart (optional)
+    addToCart(product);  
+    navigate("/cart");      
   };
 
   return (
@@ -51,7 +50,6 @@ const ProductCard = ({ product }) => {
           View Details
         </button>
 
-        {/* ✅ Fixed Add to Cart button */}
         <button
           onClick={handleAddToCart}
           className="px-4 py-2 text-sm rounded-full bg-green-600 text-white hover:bg-green-700 transition"

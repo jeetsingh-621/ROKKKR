@@ -9,6 +9,7 @@ const Cart = lazy(() => import('../pages/Cart'));
 const ProductDetails = lazy(() => import('../pages/ProductDetails'));
 const Login = lazy(() => import('../pages/Login'));
 const Signup = lazy(() => import('../pages/Signup'));
+const Checkout = lazy(() => import('../pages/Checkout'));
 
 const Loader = () => (
   <div className="w-full h-screen flex items-center justify-center text-white text-xl">
@@ -28,6 +29,7 @@ const Mainroutes = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route
           path="*"
           element={

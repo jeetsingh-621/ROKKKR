@@ -26,7 +26,7 @@ const ProductDetails = () => {
 
   return (
     <div>
-    <div className="min-h-screen w-full pt-50 bg-[#E8F4E6] text-black px-4 py-20 md:px-16">
+    <div className="min-h-screen w-full md:pt-50 bg-[#E8F4E6] text-black px-4 py-20 md:px-16">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
