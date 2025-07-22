@@ -1,5 +1,5 @@
   import React, { lazy, Suspense } from "react";
-  import halovideo from "../assets/videos/halovideo4.mp4";
+  import halovideo from "../../public/videos/halovideo4.mp4";
   import combo from "../assets/images/homep4.jpg";
 
   const ContainerScroll = lazy(() => import("../components/ui/container-scroll-animation"));

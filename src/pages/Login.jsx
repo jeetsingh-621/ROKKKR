@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import loginbg from "../assets/videos/klvideo5.mp4"; 
+import loginbg from "../../public/videos/klvideo5.mp4"; 
 import { Link } from "react-router-dom";
 
 const Login = () => {
