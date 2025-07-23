@@ -2,16 +2,13 @@ import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import useLenis from '../src/hooks/uselenis';
 
-// Lazy Components
 const Navbar = lazy(() => import('./components/Navbar'));
 const Mainroutes = lazy(() => import('./routes/Mainroutes'));
 
-// Non-lazy components
 import { ScrollProgress } from "../src/components/magicui/scroll-progress";
 import { SmoothCursor } from "../src/components/ui/smooth-cursor";
 import ScrollToTop from './components/ScrollToTop';
 
-// Loader
 import Loader from './pages/Loader';
 
 const App = () => {
@@ -22,11 +19,10 @@ const App = () => {
 
   const [loading, setLoading] = useState(true);
 
-  // Simulate font/assets load
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 2000); // can reduce to 1500ms if fast
+    }, 3500); 
 
     return () => clearTimeout(timeout);
   }, []);
