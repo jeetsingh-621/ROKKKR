@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import halohero from "../assets/images/halohero1.webp";   // Desktop
-import halohero2 from "../assets/images/halohero2.webp";  // Mobile
+import halohero from "../assets/images/halohero1.webp";  
+import halohero2 from "../assets/images/halohero2.webp";  
 
 const HeroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -13,7 +13,6 @@ const HeroSection = () => {
     <section
       className="relative w-full sm:min-h-screen flex flex-col justify-center items-center text-center overflow-hidden px-0 sm:px-0 pt-0 sm:pt-24 rounded-none rounded-b-[1.5rem] sm:rounded-[3rem] will-change-transform"
     >
-      {/* ✅ Mobile Background */}
       {isMobile && (
         <div className="relative w-full block">
           <img
@@ -30,7 +29,6 @@ const HeroSection = () => {
         </div>
       )}
 
-      {/* ✅ Desktop Background */}
       {!isMobile && (
         <div className="hidden sm:block absolute inset-0 z-0">
           <img
@@ -47,7 +45,6 @@ const HeroSection = () => {
         </div>
       )}
 
-      {/* ❗️Aap yahan scroll-down indicator ya hero text chahein to add kar sakte ho */}
     </section>
   );
 };

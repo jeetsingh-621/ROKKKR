@@ -135,7 +135,6 @@ const Ourproducts = () => {
         </Suspense>
       )}
 
-      {/* CTA Button */}
       {showButton && (
         <Suspense fallback={null}>
           <div className="mt-12 sm:mt-30 mx-auto flex justify-center">
@@ -146,7 +145,6 @@ const Ourproducts = () => {
         </Suspense>
       )}
 
-      {/* Mask animation */}
       {showMask && (
         <Suspense fallback={null}>
           <Overmaskmaker />

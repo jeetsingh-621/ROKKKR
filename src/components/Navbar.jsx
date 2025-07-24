@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,7 +9,7 @@ import { HyperText } from "../components/magicui/hyper-text";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { pathname } = useLocation();            
+  const { pathname } = useLocation();
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
@@ -20,8 +19,8 @@ const Navbar = () => {
 
   const isAuthPage = pathname === "/login" || pathname === "/signup";
   const links = isAuthPage
-    ? ["Home", "About"]                        
-    : ["Home", "Shop", "About", "Login"]; 
+    ? ["Home", "About"]
+    : ["Home", "Shop", "About", "Login"];
 
   return (
     <>
@@ -43,7 +42,10 @@ const Navbar = () => {
           </p>
         </div>
 
-        <button onClick={toggleMenu} className="text-2xl sm:text-3xl text-black">
+        <button
+          onClick={toggleMenu}
+          className="text-2xl sm:text-3xl text-black"
+        >
           {isOpen ? <RxCross2 /> : <HiOutlineMenuAlt3 />}
         </button>
       </nav>
@@ -82,7 +84,10 @@ const Navbar = () => {
               </div>
 
               {links.map((item, index) => {
-                const path = item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
+                const path =
+                  item.toLowerCase() === "home"
+                    ? "/"
+                    : `/${item.toLowerCase()}`;
                 return (
                   <Link
                     key={item}

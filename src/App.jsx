@@ -46,12 +46,10 @@ const App = () => {
         theme="dark"
       />
 
-      {/* AnimatePresence handles loader exit animation */}
       <AnimatePresence mode="wait">
         {loading && <Loader key="loader" />}
       </AnimatePresence>
 
-      {/* Main content after loader */}
       {!loading && (
         <div className="max-w-[2560px] mx-auto px-0">
           <Suspense fallback={<Loader />}>

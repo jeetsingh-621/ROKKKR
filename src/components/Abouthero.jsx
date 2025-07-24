@@ -5,7 +5,6 @@ import  InteractiveHoverButton  from "../components/magicui/interactive-hover-bu
 
 const Abouthero = () => {
   return (
-    // ✅ Ensure container has relative positioning
     <div className="w-full relative px-4 py-12 sm:px-16 sm:py-24 bg-[#E8F4E6]">
       <div className="w-full relative flex flex-col sm:flex-row items-center sm:items-start gap-10">
         {/* LEFT - Image */}
