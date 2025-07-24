@@ -3,7 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Variable Font (handles multiple weights) */
 @font-face {
   font-family: "Cinzel";
   src: url("./assets/fonts/Cinzel-VariableFont_wght.ttf") format('truetype');

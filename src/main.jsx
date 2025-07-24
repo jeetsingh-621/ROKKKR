@@ -8,7 +8,6 @@ import { Suspense } from 'react';
 import Loader from './pages/Loader.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
     <CartProvider>
       <BrowserRouter>
         <Suspense fallback={<Loader />}>
@@ -16,5 +15,5 @@ createRoot(document.getElementById('root')).render(
         </Suspense>
       </BrowserRouter>
     </CartProvider>
-  </StrictMode>
+ 
 );

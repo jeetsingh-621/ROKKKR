@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import toast from "react-hot-toast";
-
+import { toast } from "react-toastify";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
@@ -9,12 +8,10 @@ export const CartProvider = ({ children }) => {
     return saved ? JSON.parse(saved) : [];
   });
 
-  // Save cart to localStorage on change
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // Add product to cart
   const addToCart = (product) => {
     setCartItems((prev) => {
       const existing = prev.find((item) => item.id === product.id);

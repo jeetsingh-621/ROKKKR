@@ -41,7 +41,7 @@ const About = () => {
       className="w-full bg-[#E8F4E6] text-black"
     >
       {/* Hero Section */}
-      <div className="relative w-full h-[70vh] overflow-hidden bg-black text-white flex items-center justify-center px-4 sm:px-8">
+      <div className="relative w-full h-[40vh] sm:h-[70vh] overflow-hidden bg-black text-white flex items-center justify-center px-4 sm:px-8">
         <Boxes />
         <motion.div
           variants={fadeUp}
@@ -55,7 +55,7 @@ const About = () => {
       </div>
 
       {/* Scroll-Animated Image Section */}
-      <div className="w-full py-20 sm:py-28 flex items-center justify-center px-4 md:px-10">
+      <div className="w-full py-10 sm:py-28 flex items-center justify-center px-4 md:px-10">
         <motion.div
           ref={imageRef}
           style={{ scale, willChange: "transform" }}
