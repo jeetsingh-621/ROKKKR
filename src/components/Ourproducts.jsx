@@ -33,13 +33,13 @@ const Ourproducts = () => {
   const showButton = useDelayed(1000); // CTA
 
   return (
-    <div className="w-full py-10 pt-20 md:pt-30 px-4 md:px-16 bg-[linear-gradient(to_right,_black_0%,_#0c0f1a_45%,_#0c0f1a_55%,_black_100%)] text-white relative will-change-transform">
+    <div className="w-full py-0 pt-20 md:pt-30 px-4 md:px-16 bg-gradient-to-r from-black via-[#008c7a] to-black text-white relative will-change-transform">
       {/* Heading */}
       <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-16 mb-24">
         <h1 className="w-full md:w-1/2 text-center text-4xl md:text-6xl font-bold leading-tight">
           Our Products
         </h1>
-        <div className="w-full md:w-1/2 text-center text-md md:text-2xl text-zinc-400 font-semibold">
+        <div className="w-full md:w-1/2 text-center text-md md:text-2xl text-white font-semibold">
           <p>
             Crafted for those who lead with presence. HALO blends elegance,
             emotion, and excellence in every bottle
@@ -49,17 +49,17 @@ const Ourproducts = () => {
 
       {/* HERO VIDEO */}
       <Suspense fallback={<SectionLoader />}>
-        <div className="min-h-[80vh] md:min-h-screen translate-z-0">
+        <div className="min-h-[80vh]  md:min-h-screen translate-z-0">
           <ContainerScroll
             titleComponent={
-              <h1 className="text-3xl md:text-6xl font-bold text-white my-10 text-center">
+              <h1 className="text-3xl md:text-6xl font-bold text-white mb-15 text-center">
                 Introducing <span className="text-green-400"> HALO</span>
               </h1>
             }
           >
             <video
               className="h-full w-full object-cover object-[center_40%] rounded-xl will-change-transform"
-              src={"/videos/halovideo4.mp4"} // ✅ Provide a compressed version
+              src={"/videos/halovideo4.mp4"} 
               autoPlay
               muted
               loop
@@ -74,7 +74,7 @@ const Ourproducts = () => {
       {/* Perfume 1 */}
       {show3D1 && (
         <Suspense fallback={<SectionLoader />}>
-          <div className="p-4 flex flex-col-reverse md:flex-row justify-between items-center gap-8 my-10">
+          <div className="p-4 flex flex-col-reverse md:flex-row justify-between items-center gap-8 my-0">
             <div className="w-full md:w-[60%] text-center md:text-left">
               <h2 className="text-4xl md:text-6xl font-semibold">
                 Paco <span className="text-green-400"> Rabanne</span>
@@ -93,7 +93,7 @@ const Ourproducts = () => {
       {/* Perfume 2 */}
       {show3D2 && (
         <Suspense fallback={<SectionLoader />}>
-          <div className="p-4 flex flex-col md:flex-row justify-between items-center gap-8 my-10">
+          <div className="p-4 flex flex-col md:flex-row justify-between items-center gap-8 my-0">
             <div className="w-full md:w-[40%] h-[16rem] md:h-[30rem]">
               <PerfumeCanvas />
             </div>
@@ -135,6 +135,7 @@ const Ourproducts = () => {
         </Suspense>
       )}
 
+      {/* CTA Button */}
       {showButton && (
         <Suspense fallback={null}>
           <div className="mt-12 sm:mt-30 mx-auto flex justify-center">
